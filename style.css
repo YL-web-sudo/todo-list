@@ -1,0 +1,132 @@
+body {
+  background-color: lightblue;
+}
+
+h1 {
+  color: darkblue;
+  text-align: center;
+}
+
+*{
+    margin: 0;
+    padding:0 ;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('images/bggc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background:#fff;
+    margin:100px auto 20px;
+    padding:40px 30px 70px;
+    border-radius:10px;
+}
+
+.todo-app h2{
+    color: #37261A;
+    display: flex;
+    align-items: center;
+    margin-bottom:20px;
+}
+
+.todo-app h2 img{
+    width:50px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    background:#FFE2CE;
+    border-radius: 30px;
+    padding-left: 5px;
+    margin-bottom:25px;
+}
+
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-size: 14px;
+}
+
+button{
+    border: none;
+    outline: none;
+    padding: 16px 25px;
+    background:#8B4513;
+    color:#fff;
+    font-size: 16px;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: url('images/sfeetingfish.png') 1 7 , pointer;
+    position: relative;
+}
+
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/openpopcat.png);
+    background-size: cover;
+    background-position: -5px center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/lovepopcat.png);
+    background-size: 170%;
+    background-position: -12px -7px;
+}
+
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius:50%;
+    background-image: url('images/binwithoutcat.png');
+    background-size: 45px;
+    background-repeat: no-repeat;
+    background-position: -4px -4px;
+    cursor: url('images/sfeetingfish.png') , pointer;
+}
+
+ul li span:hover{
+    cursor: url('images/deletecursor.png') 16 16, pointer;
+    background-image: url('images/binwithcat.png');
+    background-position:  center center;
+    background-size: 40px;
+}
